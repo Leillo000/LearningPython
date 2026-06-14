@@ -7,42 +7,42 @@ All this file and their comments aren't mine, they are from the official Python 
 """
 
 # Str means string
-myFirstString : str = "This is an example of how to declarate a string in Python"
+my_first_String : str = "This is an example of how to declarate a string in Python"
 
 # This is another way to define a variable
-mySecondString = "\"This is a way to quote a quote inside strings\""
+my_second_string = "\"This is a way to quote a quote inside strings\""
 
 # Jump between lines
-jumpLine : str = "First Line \nSecond Line"
+jump_line : str = "First Line \nSecond Line"
 
 # If we don't want to create tab or newline, we adjust by adding r before our string to obtain a "raw string"
 # r means raw string
 
 # Example without r
-withoutR : str = 'C:\this\name'
+without_r : str = 'C:\this\name'
 
 # Example with r
-withR : str = r'C:\this\name'
+with_r : str = r'C:\this\name'
 
 # Multiline String - We can use it by adding """ and ending with """
-multiLine : str = """\
+multi_line : str = """\
 Usage: thingy [OPTIONS]
      -h                        Display this usage message
      -H hostname               Hostname to connect to
 """
 
 # Concatenate string
-finalExpresion : str = "?"
-concatenate : str = "Hello everyone, " + "how old are you" * 3 + finalExpresion * 2
+final_expresion : str = "?"
+concatenate : str = "Hello everyone, " + "how old are you" * 3 + final_expresion * 2
 
 word = "Hello Alexa!"
 
 # We can index the string
-indexString : str = word
+index_string : str = word
 
 # We can exlude strings, by slicing them
 # We start from position 0 (included) to position 5 (excluded)
-slicedWord : str = word[0 : 5]
+sliced_word : str = word[0 : 5]
 
 """
 
@@ -58,7 +58,7 @@ word[-2:]  # characters from the second-last (included) to the end
 Output: a!
 
 
-============== Note how the start is always included, and the end always excluded. This makes sure that s[:i] + s[i:] is always equal to s: ==============
+============== Note how the start is always included, and the end always excluded. This makes sure that word[:i] + word[i:] is always equal to word: ==============
 
 ********************
 
@@ -78,21 +78,32 @@ word[:4] + word[4:]
 
 """
 
-print(myFirstString)
-print(mySecondString)
-print(jumpLine)
-print(withoutR)
-print(withR)
-print(multiLine)
+# There different ways to concatenate variables in a print:
+string_1 = "Hello"
+string_2 = "Python"
+
+
+
+print(my_first_String)
+print(my_second_string)
+print(jump_line)
+print(without_r)
+print(with_r)
+print(multi_line)
 print(concatenate)
 
 # This is an example for indexing strings
 
 # Position 0 of the string is 'H'
-print(indexString[0])
+print(index_string[0])
 # Position 11 of the string is '!'
-print(indexString[11])
+print(index_string[11])
 # Is the same, but counting from the right (the string), position -1 is '!', too
 # In negative, 1 is really position 1, and not 0.
-print(indexString[-1])
-print(slicedWord)
+print(index_string[-1])
+print(sliced_word)
+
+# Ways to concatenate in prints:
+
+print(string_1 + " " +string_2)
+print(string_1, string_2)

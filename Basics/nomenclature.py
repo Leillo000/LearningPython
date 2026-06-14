@@ -8,5 +8,5 @@ In the Python case, the most common nomenclature is using the snake method, like
 # Wrong way = Camel Method = It seems like a camel.
 myVariable = "Hello World!"
 
-# Right way - Snake Method - It seems like a snake.
+# Right way - Snake Method - It seems like a snake. Without uppercases. 
 my_variable =  "Hello World!"
