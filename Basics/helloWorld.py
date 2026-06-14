@@ -11,7 +11,3 @@ print("Hello World!")
 
 # We can do operations in a line without have a problem during execution
 5 + 5
-
-
-
-

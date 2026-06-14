@@ -15,7 +15,7 @@ When can also use python as a calculator from the terminal using its interpreter
 5 * 6
 
 # With parenthesis
-(50 - 5*6) / 4
+(50 - 5 * 6) / 4
 
 # For divisions
 8 / 5  
