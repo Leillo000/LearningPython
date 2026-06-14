@@ -28,3 +28,13 @@ print( 10 != 20) #True
 
 print(3 > 2 and 4 > 3) # True
 print(3 > 2 or 4 > 3) # True
+print(not(3 > 2)) # False, reverses true to false and vice versa
+
+print("aaaa" >= "aaaa")
+print("aaaa" > "abaa") # It's comparing an alphabetic sorter
+print("aaaa" == "abaa") # The value of a string is less if the letters are first on the alphabet
+print("aaaa" != "aaca") 
+print("b" > "a") # True
+print("c" > "d") # False
+# Z = Greater value = 27 for example
+# A = Lowest value = 1 for example
