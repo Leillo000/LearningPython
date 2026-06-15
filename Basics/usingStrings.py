@@ -4,6 +4,14 @@ I skipped some steps, but this is a way to define a variable or constant in pyth
 we can specify the type, but it's optional, i like to specify to have a better readable code.
 All this file and their comments aren't mine, they are from the official Python documentation.
 
+In this file you can find:
+     - Jump lines
+     - Raw strings
+     - Indexing strings
+     - Slice strings
+     - Concatenation
+     - Multiline strings
+
 """
 
 # Str means string
