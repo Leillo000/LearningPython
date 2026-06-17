@@ -36,5 +36,7 @@ print("aaaa" == "abaa") # The value of a string is less if the letters are first
 print("aaaa" != "aaca") 
 print("b" > "a") # True
 print("c" > "d") # False
+print("A" == "a") # False
+print("a" == "a") # True, this is the only wich compares the string directly
 # Z = Greater value = 27 for example
 # A = Lowest value = 1 for example

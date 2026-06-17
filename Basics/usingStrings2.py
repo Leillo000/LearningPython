@@ -15,6 +15,7 @@ In this file you will find:
     - Join() -> Concatenation
     - Transform lowercase -> uppercase and vice versa (Swapcase)
     - Strip() -> Removes all given characters
+    - Unpacking strings
 
 Source:
 https://github.com/Asabeneh/30-Days-Of-Python/blob/master/04_Day_Strings/04_strings.md
@@ -107,19 +108,24 @@ print("HELLO".isupper()) # True
 print("hello".islower()) # True
 print("hello".isupper()) # False
 
-
+# Uppercase -> Lowercase and vice versa
 # string.swapcase()
 
 print("Hello".swapcase()) # hELLO
 print("HELLO".swapcase()) # hello
 print("hELLO".swapcase()) # Hello
+print("hello".upper()) # HELLO
+print("HELLO".lower()) # hello
 
 # string.join()
+# if it isn't an array, python automatically transform it into an array
+
 
 web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
 result = ' '.join(web_tech)
 print(result) # HTML CSS JavaScript React, it doesn't apply to the first element as you can see, there's no space before 'HTML'
 print(web_tech) # ['HTML', 'CSS', 'JavaScript', 'React']
+
 
 
 # string.replace(substring_to_replace , replacing_substring)
@@ -134,3 +140,26 @@ print(challenge.split()) # ['thirty', 'days', 'of', 'python'] Separates using sp
 
 challenge = "thirty, days, of, python"
 print(challenge.split(', ')) # ['thirty', 'days', 'of', 'python'] Separates using coma with space ", "
+
+# We can unpacking characters, but the number of variables have to equal to the number of characters in a string
+
+language : str = "Python"
+
+a, b, c, d, e, f = language
+
+# I can't define a, b = language, because Python have 6 characters
+# So that, a = P, b = y, c = t ...
+
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+
+# How index works
+
+challenge = "Hola da da da"
+substring_challenge : str = "da"
+print(challenge.index(substring_challenge))
+print(challenge.rindex(substring_challenge))
