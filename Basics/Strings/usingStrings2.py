@@ -79,7 +79,6 @@ print(lower_case.title()) # I'm Bored
 language = "Python"
 print(language[0:6:2]) # Output : Pto
 
-
 # Check if it's alphanumeric
 
 challenge = '30DaysPython'
