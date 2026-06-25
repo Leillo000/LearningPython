@@ -9,8 +9,8 @@ There are four collection data types in Python :
     unmodifiable(immutable). Allows duplicate members.
 
     - Set: is a collection which is unordered, un-indexed and 
-    unmodifiable, but we can add new items to the set. Duplicate
-    members are not allowed.
+    unmodifiable in a no-restricted way (we can add and remove items), but 
+    we can add new items to the set. Duplicate members are not allowed.
 
     - Dictionary: is a collection which is unordered, changeable
     (modifiable) and indexed. No duplicate members.
