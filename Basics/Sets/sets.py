@@ -22,13 +22,13 @@ We will see in this class:
     - Adding Items to a Set .add(item), .update(list or set or tupla)
     - Removing Items from a Set: .remove(item)
     - Clearing Items in a Set:  .pop(no-argument because it's un-indexed), .clear()
-    - Deleting a Set
+    - Deleting a Set: del
     - Converting List to Set
     - Joining Sets : .union()
     - Finding Intersection Items : intersection()
     - Checking Subset and Super Set: issuperset() and issubset()
-    - Checking the Difference Between Two Sets
-    - Finding Symmetric Difference Between Two Sets
+    - Checking the Difference Between Two Sets : .difference()
+    - Finding Symmetric Difference Between Two Sets : .symmetric_difference()
     - Joining Sets : .isdisjoint()
 
 
