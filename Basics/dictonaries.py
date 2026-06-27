@@ -1,19 +1,19 @@
 """
 A dictionary is a collection of unordered, modifiable(mutable) paired (key: value) data type.
 
-    - Creating a Dictionary 
-    - Dictionary Length
+    - Creating a Dictionary : {}
+    - Dictionary Length : len()
     - Accessing Dictionary Items (and checking if a value exists) : ["key1"][1], .get("keyname")
-    - Adding Items to a Dictionary
-    - Modifying Items in a Dictionary
-    - Checking Keys in a Dictionary
-    - Removing Key and Value Pairs from a Dictionary
-    - Changing Dictionary to a List of Items
-    - Clearing a Dictionary
-    - Deleting a Dictionary
-    - Copy a Dictionary
-    - Getting Dictionary Keys as a List
-    - Getting Dictionary Values as a List
+    - Adding Items to a Dictionary : dic[new_key] = new_value
+    - Modifying Items in a Dictionary : dic[key] = new_value
+    - Checking Keys in a Dictionary : in
+    - Removing Key and Value Pairs from a Dictionary : .pop(key), .popitem(), del
+    - Changing Dictionary to a List of Items : .items() -> key pairs with values
+    - Clearing a Dictionary : .clear()
+    - Deleting a Dictionary : del
+    - Copy a Dictionary : .copy()
+    - Getting Dictionary Keys as a List : .keys() -> only keys
+    - Getting Dictionary Values as a List : .values() -> only values
 
 Source: https://github.com/Asabeneh/30-Days-Of-Python/blob/master/08_Day_Dictionaries/08_dictionaries.md
 
@@ -38,31 +38,119 @@ person = {
 
 
 
-# ============= DICTONARY LENGTH =============
+# ============= DICTIONARY LENGTH =============
 print(len(person))
 
 
 
 
-# ============= ACCESING DICTONARY ITEMS =============
-print(person["skills"][1]) # We access through keys. The index after the key is the index of a list in a dictonary
+# ============= ACCESING DICTIONARY ITEMS =============
+print(person["skills"][1]) # We access through keys. The index after the key is the index of a list in a dictionary
 print(person["address"]["street"]) # It works the same as the before case
 
 # Check if a value exist with a key, in the case that we don't want to check manually
 print(person.get("city")) # None
-print(person.get("skills"))
+print(person.get("skills")) # Verify if the value exists
 
 
 
 
 
 
-# ============= ADDING ITEMS TO A DICTONARY =============
+# ============= ADDING ITEMS TO A DICTIONARY =============
 # We declare a "variable" or a key using dictonary_name["new_key"] = "new_value"
 person["job_tittle"] = "Instructor"
 # Practically person["skills"] it's a list, so we can use .append()
-person["skills"].append("CSS") # Because it's a list in a dictonary
-# It's a dictonary in a dictonary, so it's the same logic
-person["address"]["avenue"] = "Florida" # Because it's a dictonary in a dictonary
+person["skills"].append("CSS") # Because it's a list in a dictionary
+# It's a dictionary in a dictionary, so it's the same logic
+person["address"]["avenue"] = "Florida" # Because it's a dictionary in a dictionary
 print(person)
 
+
+
+
+
+
+# ============= MODIFYIING ITEMS IN A DICTIONARY =============
+# We can modify our dictionary:
+person["first_name"] = "Leillo0000"
+print(person["first_name"])
+
+
+
+
+
+
+# ============= CHECKING KEYS IN DICTiONARY =============
+# As we do in strings, lists, tuples and sets, we can check if a value exists with "in"
+# In this case, we check if a key exists inside the dictionary
+print("Does skill key exists in person?","skill" in person) # True, key "skill" exists in person
+print("Does second_name key exists in person?","second_name" in person) # False, it doesn't exist second_name key in person
+
+
+
+
+
+
+# ============= REMOVING KEY AND VALUE PAIRS FROM A DICTIONARY =============
+# As we do in lists, we can use .pop() method
+print(person.pop("job_tittle"), "this is the item that will be eliminated")
+print(person)
+# Delete a key completly
+del person["address"]["avenue"] # removes adress { avenue }
+print("I removed the address { avenue } in the dictionary")
+
+
+# Delete the last item of the dictionary
+print(person.popitem(), "this is the last item in person dictionary")
+print(person)
+
+
+
+
+
+# ============= CHANGIND DICTONARY TO A LIST OF TUPLES =============
+new_list = person.items()
+print(new_list) # It prints a list of tuples
+
+
+
+
+
+
+# ============= CLEARING A DICTIONARY =============
+print(person.clear())
+
+
+
+
+
+
+# ============= DELETING A DICTIONARY =============
+del person
+
+
+
+
+
+
+# ============= COPYING A DICTIONARY =============
+new_dct = {"key1" : "item1","key2" : "item2","key3" : "item3"}
+new_dct_2 = new_dct.copy() # We can copy a dictionary like this
+
+
+
+
+
+
+# ============= GETTING DICTIONARY KEYS AS A LIST ==============
+list_keys = new_dct.keys()
+print(list_keys)
+
+
+
+
+
+# ============= GETTING DICTIONARY VALUES AS A LIST =============
+list_values = new_dct.values()
+print(list_values)
