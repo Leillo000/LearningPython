@@ -14,6 +14,7 @@ A dictionary is a collection of unordered, modifiable(mutable) paired (key: valu
     - Copy a Dictionary : .copy()
     - Getting Dictionary Keys as a List : .keys() -> only keys
     - Getting Dictionary Values as a List : .values() -> only values
+    - Create a dictionary with association or a copy : dict.fromkeys()
 
 Source: https://github.com/Asabeneh/30-Days-Of-Python/blob/master/08_Day_Dictionaries/08_dictionaries.md
 
@@ -111,7 +112,9 @@ print(person)
 
 # ============= CHANGIND DICTONARY TO A LIST OF TUPLES =============
 new_list = person.items()
+print(type(new_list))
 print(new_list) # It prints a list of tuples
+# If we really want that our list or items or tuples it really be a list, we have to use the constructor list()
 
 
 
@@ -144,7 +147,9 @@ new_dct_2 = new_dct.copy() # We can copy a dictionary like this
 
 
 # ============= GETTING DICTIONARY KEYS AS A LIST ==============
-list_keys = new_dct.keys()
+list_keys = list(new_dct.keys())
+print(type(new_dct.keys()))
+print(type(list_keys))
 print(list_keys)
 
 
@@ -152,5 +157,21 @@ print(list_keys)
 
 
 # ============= GETTING DICTIONARY VALUES AS A LIST =============
-list_values = new_dct.values()
+list_values = list(new_dct.values())
+print(type(new_dct.values()))
+print(type(list_values))
 print(list_values)
+
+
+
+
+# ============= CREATING A NEW DICTIONARY OR A COPY =============
+# This is made with purpose for visualize what .fromkeys() really do.
+my_new_dict = dict.fromkeys(["name", "age"], ["Leillo", 45])
+print(my_new_dict)
+my_new_dict_1 = dict.fromkeys("age", 1)
+print(my_new_dict_1)
+my_new_dict_2 = dict.fromkeys(["age"], 1)
+print(my_new_dict_2)
+my_new_dict_3 = dict.fromkeys(new_dct)
+print(my_new_dict_3) 
