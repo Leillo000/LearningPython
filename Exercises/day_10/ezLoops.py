@@ -27,5 +27,25 @@ for hashtag in range(0,7):
     count += 1
     print(str_hash)
     str_hash = ""
+#4
+str_hash = ""
 
-
+for rows in range(0,8):
+    for columns in range(0,8):
+        str_hash += "# "
+    if rows != 7:
+        str_hash += "\n"
+print(str_hash)
+#5
+for row in range(0 , 11):
+    print(row, "X", row, "=", row ** 2)
+#6
+python_list = ["Python", "Numpy", "Pandas", "Django", "Flask"]
+for item in python_list:
+    print(item)
+#7 and 8
+for number in range(1, 101):
+    if number % 2 == 0: 
+        print(number, "is even number")
+    else:
+        print(number, "is odd number")
